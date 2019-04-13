@@ -12,6 +12,7 @@ public:
 signals:
 
 public slots:
+    bool removeFile(QString link);
 };
 
 #endif // REMOVEDIRANDFILE_H
