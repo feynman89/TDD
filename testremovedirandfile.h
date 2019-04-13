@@ -15,6 +15,7 @@ signals:
 
 private slots:
     void testCreate();
+    void testRemoveFile();
 };
 
 #endif // TESTREMOVEDIRANDFILE_H
