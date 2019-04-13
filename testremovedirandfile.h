@@ -13,6 +13,7 @@ public:
 signals:
 
 private slots:
+    void testCreate();
 };
 
 #endif // TESTREMOVEDIRANDFILE_H
