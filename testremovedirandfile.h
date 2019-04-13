@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QTest>
+#include "removedirandfile.h"
 
 class TestRemoveDirAndFile : public QObject
 {
