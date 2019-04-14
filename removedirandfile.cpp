@@ -68,7 +68,7 @@ bool RemoveDirAndFile::checkDir(QString link)
         return false;
 }
 
-QString RemoveDirAndFile::inputSumbolsInFile(QString link)
+QString RemoveDirAndFile::inputSumbolsInFile(QString link, QString symbols)
 {
     if(link == "E:/tdd/test.txt")
         return QString("Hello World");
