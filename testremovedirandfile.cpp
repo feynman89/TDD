@@ -66,3 +66,9 @@ void TestRemoveDirAndFile::testCheckDir()
     RemoveDirAndFile removeDirAndFile;
     QCOMPARE(removeDirAndFile.checkDir("E:/tdd"), true);
 }
+
+void TestRemoveDirAndFile::testInputSumbolsInFile()
+{
+    RemoveDirAndFile removeDirAndFile;
+    QCOMPARE(removeDirAndFile.inputSumbolsInFile("E:/tdd/test.txt"), "Hello World");
+}
