@@ -22,7 +22,6 @@ public slots:
     bool checkFile(QString link);
     bool checkDir(QString link);
     QString inputSumbolsInFile(QString link, QString symbols);
-    bool createFile(QString link);
 };
 
 #endif // REMOVEDIRANDFILE_H
