@@ -54,7 +54,7 @@ QStringList RemoveDirAndFile::getAllFoldersInDir(QString link)
 
 bool RemoveDirAndFile::checkFile(QString link)
 {
-    if(link == "E:/tdd/test.txt")
+    if(QFile::exists(link))
         return true;
     else
         return false;
