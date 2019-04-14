@@ -24,6 +24,7 @@ private slots:
     void testCheckFile();
     void testCheckDir();
     void testInputSumbolsInFile();
+    void testCreateFile();
 };
 
 #endif // TESTREMOVEDIRANDFILE_H
