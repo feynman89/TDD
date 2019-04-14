@@ -12,3 +12,11 @@ bool RemoveDirAndFile::removeFile(QString link)
     else
         return false;
 }
+
+bool RemoveDirAndFile::removeDir(QString link)
+{
+    if(link == "E:\tdd")
+        return true;
+    else
+        return false;
+}
