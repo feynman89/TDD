@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QTest>
+#include <QFile>
+#include <QDir>
 #include "removedirandfile.h"
 
 class TestRemoveDirAndFile : public QObject
@@ -18,6 +20,7 @@ private slots:
     void testRemoveFile();
     void testRemoveDir();
     void testGetAllFilesInDir();
+    void testGetAllFoldersInDir();
 };
 
 #endif // TESTREMOVEDIRANDFILE_H
