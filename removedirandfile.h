@@ -19,6 +19,7 @@ public slots:
     QStringList getAllFilesInDir(QString link);
     QStringList getAllFoldersInDir(QString link);
     bool checkFile(QString link);
+    bool checkDir(QString link);
 };
 
 #endif // REMOVEDIRANDFILE_H

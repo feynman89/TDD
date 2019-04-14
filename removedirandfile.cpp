@@ -59,3 +59,11 @@ bool RemoveDirAndFile::checkFile(QString link)
     else
         return false;
 }
+
+bool RemoveDirAndFile::checkDir(QString link)
+{
+    if(link == "E:/tdd")
+        return true;
+    else
+        return false;
+}
