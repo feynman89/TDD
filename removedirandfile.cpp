@@ -25,3 +25,8 @@ QStringList RemoveDirAndFile::getAllFilesInDir(QString link)
 {
     return QDir(link).entryList(QDir::Files);
 }
+
+QStringList RemoveDirAndFile::getAllFoldersInDir(QString link)
+{
+    return QDir(link).entryList(QDir::Dirs | QDir::AllDirs | QDir::NoDotAndDotDot);
+}
