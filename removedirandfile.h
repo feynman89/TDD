@@ -2,6 +2,7 @@
 #define REMOVEDIRANDFILE_H
 
 #include <QObject>
+#include <QFile>
 
 class RemoveDirAndFile : public QObject
 {
