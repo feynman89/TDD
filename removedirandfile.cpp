@@ -62,7 +62,7 @@ bool RemoveDirAndFile::checkFile(QString link)
 
 bool RemoveDirAndFile::checkDir(QString link)
 {
-    if(link == "E:/tdd")
+    if(QDir().exists(link))
         return true;
     else
         return false;
