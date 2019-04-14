@@ -60,3 +60,9 @@ void TestRemoveDirAndFile::testCheckFile()
     RemoveDirAndFile removeDirAndFile;
     QCOMPARE(removeDirAndFile.checkFile("E:/tdd/test.txt"), true);
 }
+
+void TestRemoveDirAndFile::testCheckDir()
+{
+    RemoveDirAndFile removeDirAndFile;
+    QCOMPARE(removeDirAndFile.checkDir("E:/tdd"), true);
+}

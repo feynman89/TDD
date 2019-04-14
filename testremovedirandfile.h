@@ -22,6 +22,7 @@ private slots:
     void testGetAllFilesInDir();
     void testGetAllFoldersInDir();
     void testCheckFile();
+    void testCheckDir();
 };
 
 #endif // TESTREMOVEDIRANDFILE_H
