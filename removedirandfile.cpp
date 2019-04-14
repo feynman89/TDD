@@ -74,7 +74,8 @@ QString RemoveDirAndFile::inputSumbolsInFile(QString link, QString symbols)
     file.open(QIODevice::Text | QIODevice::Append);
     QTextStream writeStream(&file);
     writeStream << symbols;
-    file.flush();
+    file.close();
+    file.open(QIODevice::ReadOnly);
     QString result = file.readAll();
     file.close();
     return result;
