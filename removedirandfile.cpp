@@ -20,3 +20,8 @@ bool RemoveDirAndFile::removeDir(QString link)
     else
         return false;
 }
+
+QStringList RemoveDirAndFile::getAllFilesInDir(QString link)
+{
+    return QDir(link).entryList(QDir::Files);
+}

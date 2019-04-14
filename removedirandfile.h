@@ -16,6 +16,7 @@ signals:
 public slots:
     bool removeFile(QString link);
     bool removeDir(QString link);
+    QStringList getAllFilesInDir(QString link);
 };
 
 #endif // REMOVEDIRANDFILE_H
