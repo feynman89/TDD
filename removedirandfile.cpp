@@ -70,8 +70,12 @@ bool RemoveDirAndFile::checkDir(QString link)
 
 QString RemoveDirAndFile::inputSumbolsInFile(QString link, QString symbols)
 {
-    if(link == "E:/tdd/test.txt")
-        return QString("Hello World");
-    else
-        return QString("false");
+    QFile file(link);
+    file.open(QIODevice::Text | QIODevice::Append);
+    QTextStream writeStream(&file);
+    writeStream << symbols;
+    file.flush();
+    QString result = file.readAll();
+    file.close();
+    return result;
 }

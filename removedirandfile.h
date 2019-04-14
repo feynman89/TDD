@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QFile>
 #include <QDir>
+#include <QTextStream>
 
 class RemoveDirAndFile : public QObject
 {
@@ -20,7 +21,7 @@ public slots:
     QStringList getAllFoldersInDir(QString link);
     bool checkFile(QString link);
     bool checkDir(QString link);
-    QString inputSumbolsInFile(QString link);
+    QString inputSumbolsInFile(QString link, QString symbols);
 };
 
 #endif // REMOVEDIRANDFILE_H
