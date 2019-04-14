@@ -51,3 +51,11 @@ QStringList RemoveDirAndFile::getAllFoldersInDir(QString link)
 {
     return QDir(link).entryList(QDir::Dirs | QDir::AllDirs | QDir::NoDotAndDotDot);
 }
+
+bool RemoveDirAndFile::checkFile(QString link)
+{
+    if(link == "E:/tdd/test.txt")
+        return true;
+    else
+        return false;
+}
