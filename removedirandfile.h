@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QFile>
+#include <QDir>
 
 class RemoveDirAndFile : public QObject
 {
