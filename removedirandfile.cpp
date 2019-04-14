@@ -80,3 +80,11 @@ QString RemoveDirAndFile::inputSumbolsInFile(QString link, QString symbols)
     file.close();
     return result;
 }
+
+bool RemoveDirAndFile::createFile(QString link)
+{
+    QFile file(link);
+    file.open(QIODevice::WriteOnly);
+    file.close();
+    return true;
+}
