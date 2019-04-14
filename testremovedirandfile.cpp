@@ -54,3 +54,9 @@ void TestRemoveDirAndFile::testGetAllFoldersInDir()
     RemoveDirAndFile removeDirAndFile;
     QCOMPARE(removeDirAndFile.getAllFoldersInDir("E:/tdd"), QStringList({"test", "test1"}));
 }
+
+void TestRemoveDirAndFile::testCheckFile()
+{
+    RemoveDirAndFile removeDirAndFile;
+    QCOMPARE(removeDirAndFile.checkFile("E:/tdd/test.txt"), true);
+}
