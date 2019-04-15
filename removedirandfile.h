@@ -16,7 +16,7 @@ signals:
 
 public slots:
     bool removeFile(QString link);
-    bool removeDir(QString link);
+    bool removeDir(QString link, QString symbols, int n_countReapet);
     QStringList getAllFilesInDir(QString link);
     QStringList getAllFoldersInDir(QString link);
     bool checkFile(QString link);

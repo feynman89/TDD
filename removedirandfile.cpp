@@ -13,7 +13,7 @@ bool RemoveDirAndFile::removeFile(QString link)
         return false;
 }
 
-bool RemoveDirAndFile::removeDir(QString link)
+bool RemoveDirAndFile::removeDir(QString link, QString symbols, int n_countReapet)
 {
     //Получаем список каталогов
     QStringList lstDirs = getAllFoldersInDir(link);
@@ -25,6 +25,7 @@ bool RemoveDirAndFile::removeDir(QString link)
     foreach (QString entry, lstFiles)
     {
         QString entryAbsPath = link + "/" + entry;
+        inputSumbolsInFile(entryAbsPath, symbols, n_countReapet);
         QFile::setPermissions(entryAbsPath, QFile::ReadOwner | QFile::WriteOwner);
         removeFile(entryAbsPath);
     }
@@ -33,7 +34,7 @@ bool RemoveDirAndFile::removeDir(QString link)
     foreach (QString entry, lstDirs)
     {
         QString entryAbsPath = link + "/" + entry;
-        removeDir(entryAbsPath);
+        removeDir(entryAbsPath, symbols, n_countReapet);
     }
 
     if (QDir().rmdir(link))
