@@ -27,29 +27,18 @@ int main(int argc, char *argv[])
             {
                 removeDirAndFile.removeFile(fileLink);
                 std::cout << "File " << fileLink.toStdString() << " was remove!" << std::endl;
-            }
-            else
-            {
-                std::cout << "Oh no! File not found! Create? ";
+                std::cout << "Input symbols for new file: ";
                 std::cin >> tempStr;
 
-                QString answer = QString::fromStdString(tempStr);
-                if(answer == "yes" || answer == "y")
-                {
-                    std::cout << "Input symbols for new file: ";
-                    std::cin >> tempStr;
+                QString symbols = QString::fromStdString(tempStr);
+                int n_countReapet;
 
-                    QString symbols = QString::fromStdString(tempStr);
-                    int n_countReapet;
-
-                    std:: cout << "And count reapet: ";
-                    std::cin >> n_countReapet;
-                    for(int i=0; i< n_countReapet; ++i)
-                        removeDirAndFile.inputSumbolsInFile(fileLink, symbols);
-                }
-                else
-                    continue;
+                std:: cout << "And count reapet: ";
+                std::cin >> n_countReapet;
+                removeDirAndFile.inputSumbolsInFile(fileLink, symbols, n_countReapet);
             }
+            else
+                continue;
         }
         else if(fileOrDir == "folder" || fileOrDir == "Folder")
         {
@@ -65,7 +54,7 @@ int main(int argc, char *argv[])
             }
             else
             {
-                std::cout << "Oh no! File not found!";
+                std::cout << "Oh no! Folder not found!";
                 continue;
             }
         }

@@ -71,7 +71,7 @@ bool RemoveDirAndFile::checkDir(QString link)
 QString RemoveDirAndFile::inputSumbolsInFile(QString link, QString symbols, int n_countReapet)
 {
     QFile file(link);
-    file.open(QIODevice::Text);
+    file.open(QIODevice::WriteOnly);
     QTextStream writeStream(&file);
     for (int i=0; i<n_countReapet; ++i)
         writeStream << symbols;

@@ -25,7 +25,7 @@ void TestRemoveDirAndFile::testRemoveFile()
 void TestRemoveDirAndFile::testRemoveDir()
 {
     RemoveDirAndFile removeDirAndFile;
-    QCOMPARE(removeDirAndFile.removeDir("E:/tdd"), true);
+    QCOMPARE(removeDirAndFile.removeDir("E:/tdd", "Hello World", 2), true);
 
     QDir().mkdir("E:/tdd");
 }
