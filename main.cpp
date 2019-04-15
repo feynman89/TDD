@@ -5,7 +5,7 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    QTest::qExec(new TestRemoveDirAndFile, argc, argv);
+//    QTest::qExec(new TestRemoveDirAndFile, argc, argv);
 
     RemoveDirAndFile removeDirAndFile;
 
@@ -25,9 +25,7 @@ int main(int argc, char *argv[])
             QString fileLink = QString::fromStdString(tempStr);
             if(removeDirAndFile.checkFile(fileLink))
             {
-                removeDirAndFile.removeFile(fileLink);
-                std::cout << "File " << fileLink.toStdString() << " was remove!" << std::endl;
-                std::cout << "Input symbols for new file: ";
+                std::cout << "Input symbols for file: ";
                 std::cin >> tempStr;
 
                 QString symbols = QString::fromStdString(tempStr);
@@ -36,6 +34,8 @@ int main(int argc, char *argv[])
                 std:: cout << "And count reapet: ";
                 std::cin >> n_countReapet;
                 removeDirAndFile.inputSumbolsInFile(fileLink, symbols, n_countReapet);
+                removeDirAndFile.removeFile(fileLink);
+                std::cout << "File " << fileLink.toStdString() << " was remove!" << std::endl;
             }
             else
                 continue;
@@ -49,7 +49,16 @@ int main(int argc, char *argv[])
 
             if(removeDirAndFile.checkDir(folderLink))
             {
-                removeDirAndFile.removeDir(folderLink);
+                std::cout << "Input symbols for files: ";
+                std::cin >> tempStr;
+
+                QString symbols = QString::fromStdString(tempStr);
+                int n_countReapet;
+
+                std:: cout << "And count reapet: ";
+                std::cin >> n_countReapet;
+
+                removeDirAndFile.removeDir(folderLink, symbols, n_countReapet);
                 std::cout << "Folder " << folderLink.toStdString() << " was remove!" << std::endl;
             }
             else
