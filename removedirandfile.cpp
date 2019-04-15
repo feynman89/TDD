@@ -68,12 +68,13 @@ bool RemoveDirAndFile::checkDir(QString link)
         return false;
 }
 
-QString RemoveDirAndFile::inputSumbolsInFile(QString link, QString symbols)
+QString RemoveDirAndFile::inputSumbolsInFile(QString link, QString symbols, int n_countReapet)
 {
     QFile file(link);
-    file.open(QIODevice::Text | QIODevice::Append);
+    file.open(QIODevice::Text);
     QTextStream writeStream(&file);
-    writeStream << symbols;
+    for (int i=0; i<n_countReapet; ++i)
+        writeStream << symbols;
     file.close();
     file.open(QIODevice::ReadOnly);
     QString result = file.readAll();

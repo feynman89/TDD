@@ -21,7 +21,7 @@ public slots:
     QStringList getAllFoldersInDir(QString link);
     bool checkFile(QString link);
     bool checkDir(QString link);
-    QString inputSumbolsInFile(QString link, QString symbols);
+    QString inputSumbolsInFile(QString link, QString symbols, int n_countReapet);
 };
 
 #endif // REMOVEDIRANDFILE_H
