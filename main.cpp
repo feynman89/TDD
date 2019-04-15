@@ -5,7 +5,7 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-//    QTest::qExec(new TestRemoveDirAndFile, argc, argv);
+    QTest::qExec(new TestRemoveDirAndFile, argc, argv);
 
     RemoveDirAndFile removeDirAndFile;
 
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
             if(removeDirAndFile.checkFile(fileLink))
             {
                 removeDirAndFile.removeFile(fileLink);
-                std::cout << "File " << fileLink.toStdString() << "was remove!" << std::endl;
+                std::cout << "File " << fileLink.toStdString() << " was remove!" << std::endl;
             }
             else
             {
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
             if(removeDirAndFile.checkDir(folderLink))
             {
                 removeDirAndFile.removeDir(folderLink);
-                std::cout << "Folder " << folderLink.toStdString() << "was remove!" << std::endl;
+                std::cout << "Folder " << folderLink.toStdString() << " was remove!" << std::endl;
             }
             else
             {
