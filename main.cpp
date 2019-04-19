@@ -5,7 +5,7 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-//    QTest::qExec(new TestRemoveDirAndFile, argc, argv);
+    QTest::qExec(new TestRemoveDirAndFile, argc, argv);
 
     RemoveDirAndFile removeDirAndFile;
 
